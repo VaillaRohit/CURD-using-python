@@ -1,0 +1,32 @@
+<!-- load_csv.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... (head content) ... -->
+</head>
+<body>
+    <h2>Load Data from CSV</h2>
+    <h4>To use this feature make sure number of columns and column names are same in database table and csv file</h4>
+
+    {% if message %}
+        <p style="color: green;">{{ message }}</p>
+    {% endif %}
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    {% if new_question_ids %}
+        <p>New Question IDs: {{ new_question_ids|join(', ') }}</p>
+    {% endif %}
+
+    <form action="/load_csv" method="post" enctype="multipart/form-data">
+        <!-- ... (existing form fields) ... -->
+        <input type="file" name="csv_file" accept=".csv">
+        <button type="submit">Load CSV</button>
+    </form>
+
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>

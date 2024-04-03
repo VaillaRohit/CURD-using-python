@@ -1,0 +1,41 @@
+<!-- download_csv.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download CSV</title>
+</head>
+<body>
+    <h1>Download CSV</h1>
+    
+    <form action="/download_csv" method="get">
+        <button type="submit">Download CSV</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const response = await fetch('/download_csv', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                document.getElementById('message').textContent = result.message;
+            } else {
+                document.getElementById('message').textContent = result.error;
+            }
+        });
+    </script>
+</body>
+</html>

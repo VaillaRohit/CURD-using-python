@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Question</title>
+</head>
+<body>
+    <h1>Create Question</h1>
+
+    <!-- Form for creating a question -->
+    <form action="/create" method="post">
+        <label for="question_text">Question Text:</label>
+        <input type="text" name="question_text" required><br>
+
+        <label for="question_type">Question Type:</label>
+        <input type="text" name="question_type" required><br>
+
+        <label for="answer_a">Answer A:</label>
+        <input type="text" name="answer_a" required><br>
+
+        <label for="answer_b">Answer B:</label>
+        <input type="text" name="answer_b" required><br>
+
+        <label for="answer_c">Answer C:</label>
+        <input type="text" name="answer_c" required><br>
+
+        <label for="answer_d">Answer D:</label>
+        <input type="text" name="answer_d" required><br>
+
+        <label for="correct_answer">Correct Answer:</label>
+        <input type="text" name="correct_answer" required><br>
+
+        <label for="explanation">Explanation:</label>
+        <input type="text" name="explanation" required><br>
+
+        <button type="submit">Create Question</button>
+    </form>
+</body>
+</html>

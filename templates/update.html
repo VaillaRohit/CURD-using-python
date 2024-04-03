@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Question</title>
+</head>
+<body>
+    <h1>Update Question</h1>
+
+    <!-- Form for updating a question -->
+    <form action="/update" method="post">
+        <label for="update_question_id">Question ID:</label>
+        <input type="text" name="update_question_id" required><br>
+    
+        <label for="update_question_text">Updated Question Text:</label>
+        <input type="text" name="update_question_text" required><br>
+    
+        <label for="update_question_type">Updated Question Type:</label>
+        <input type="text" name="update_question_type" required><br>
+    
+        <label for="update_answer_a">Updated Answer A:</label>
+        <input type="text" name="update_answer_a" required><br>
+    
+        <label for="update_answer_b">Updated Answer B:</label>
+        <input type="text" name="update_answer_b" required><br>
+    
+        <label for="update_answer_c">Updated Answer C:</label>
+        <input type="text" name="update_answer_c" required><br>
+    
+        <label for="update_answer_d">Updated Answer D:</label>
+        <input type="text" name="update_answer_d" required><br>
+    
+        <label for="update_correct_answer">Updated Correct Answer:</label>
+        <input type="text" name="update_correct_answer" required><br>
+    
+        <label for="update_explanation">Updated Explanation:</label>
+        <input type="text" name="update_explanation" required><br>
+    
+        <button type="submit">Update Question</button>
+    </form>
+</body>
+</html>

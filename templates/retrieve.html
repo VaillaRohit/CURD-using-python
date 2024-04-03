@@ -1,0 +1,35 @@
+<!-- retrieve.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieve Question</title>
+</head>
+<body>
+    <h1>Retrieve a Question</h1>
+    <form action="/retrieve" method="get">
+        <label for="question_id">Question ID:</label>
+        <input type="text" name="question_id" required><br>
+
+        <button type="submit">Retrieve Question</button>
+    </form>
+
+    {% if question %}
+        <h2>Question Details</h2>
+        <p>Question ID: {{ question.question_id }}</p>
+        <p>Question Text: {{ question.question_text }}</p>
+        <p>Question Type: {{ question.question_type }}</p>
+        <p>Answer A: {{ question.answer_a }}</p>
+        <p>Answer B: {{ question.answer_b }}</p>
+        <p>Answer C: {{ question.answer_c }}</p>
+        <p>Answer D: {{ question.answer_d }}</p>
+        <p>Correct Answer: {{ question.correct_answer }}</p>
+        <p>Explanation: {{ question.explanation }}</p>
+        <!-- Add other fields as needed -->
+    {% else %}
+        <p>No question found with the provided ID.</p>
+    {% endif %}
+</body>
+</html>
